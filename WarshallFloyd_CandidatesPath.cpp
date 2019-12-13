@@ -37,9 +37,8 @@ int main() {
   FOR(k,0,n-1){
     FOR(i,0,n-1){
       FOR(j,0,n-1){
-        if(i==j) continue;
-        if(i==k) continue;
-        if(j==k) continue;
+        if(i==j || i==k || j==k) continue;
+        
         if(dist[i][j]>dist[i][k]+dist[k][j]){
           dist[i][j] = dist[i][k]+dist[k][j];
         }
